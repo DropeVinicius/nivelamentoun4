@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Nivelamento - Língua Portuguesa Nível 1 - Unidade 4</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+                
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu esteja acima de outros elementos */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/f_auto,q_auto/v1733243815/ImagemBG-8_wxd0x5.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo do ícone de citação */
+        .quote-icon {
+            font-size: 40px; /* Tamanho do ícone */
+            color: #015A42; /* Cor do ícone */
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+            flex-shrink: 0; /* Garante que o ícone não diminua */
+        }
+
+        /* Container do parágrafo com ícone */
+        .quote-paragraph {
+            display: flex; /* Alinha o ícone e o texto lado a lado */
+            align-items: flex-start; /* Alinha verticalmente ao topo */
+            margin-top: 30px auto; /* Espaço superior */
+            width: 100%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Parágrafo do conteúdo */
+        .quote-paragraph p {
+            font-size: 16px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            text-align: justify;
+            color: #333; /* Cor do texto */
+            flex: 1; /* Faz o parágrafo ocupar o espaço restante */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .quote-paragraph {
+                flex-direction: row; /* Mantém ícone e texto lado a lado */
+                align-items: flex-start; /* Alinha ícone ao topo do texto */
+                text-align: justify; /* Garante alinhamento justificado no texto */
+            }
+
+            .quote-icon {
+                font-size: 35px;
+                margin-right: 10px; /* Remove margem lateral */
+            }
+
+            .quote-paragraph p {
+                font-size: 14px; /* Reduz o tamanho do texto */
+                line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+            }
+        }
+        .text-right {
+            float: right; /* Alinha o texto à direita */
+            text-align: right; /* Garante que o conteúdo interno também esteja alinhado à direita */
+            font-size: inherit; /* Herda o tamanho da fonte do parágrafo */
+            font-family: inherit; /* Herda a fonte do parágrafo */
+            color: inherit; /* Herda a cor do parágrafo */
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao1 p {
+                font-size: 0.6rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao1 p {
+                font-size: 1.5rem;
+            } 
+        }
+        /* Quadro com borda violeta */
+        .quadrov {
+            border: 2px solid #015A42; /* Borda violeta */
+            border-radius: 10px; /* Bordas arredondadas */
+            padding: 20px; /* Espaçamento interno */
+            background-color: #fff; /* Fundo branco */
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Largura máxima */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-bottom: 20px;
+        }
+
+        /* Imagem dentro do quadro */
+        .imagem-quadrov {
+            width: 100%; /* Imagem ocupa toda a largura disponível */
+            max-width: 700px; /* Limite máximo da largura */
+            height: auto; /* Mantém a proporção */
+            margin-bottom: 15px;
+        }
+
+        /* Fonte da imagem */
+        .fonte-quadrov {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #555; /* Cinza escuro */
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* Descrição da imagem */
+        .descricao-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Preto claro */
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo responsivo para o quadro */
+        @media (max-width: 768px) {
+            .quadrov {
+                padding: 15px;
+            }
+
+            .titulo-quadrov {
+                font-size: 20px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quadrov {
+                padding: 10px;
+            }
+
+            .titulo-quadrov {
+                font-size: 18px;
+            }
+
+            .fonte-quadrov,
+            .descricao-quadrov {
+                font-size: 12px;
+            }
+        }
+        .fonte-menor {
+            font-size: 15px; /* Tamanho menor */
+            font-style: italic; /* Opcional: estilização adicional */
+            color: #000; /* Opcional: cor mais discreta */
+        }
+        .text-red {
+            color: red; /* Define a cor do texto como vermelho */
+            font-weight: bold; /* Opcional: deixa o texto em negrito para destaque */
+            display: inline; /* Garante que o span seja tratado como texto inline */
+            
+        }
+        .text-green {
+            color: #015A42;
+        }
+        /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */            
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+        /* Tabs container */
+        .tabs-container2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            width: calc(90% - 10px); /* Subtrai o gap total da largura */
+            max-width: 800px; /* Limite máximo */
+            font-weight: bold;
+            border-radius: 10px;
+            gap: 10px;
+            padding: 5px;
+            box-sizing: border-box; /* Garante que padding e largura sejam incluídos no cálculo */
+        }
+
+        .tab2{
+            flex-grow: 1;  /* Impede que as abas cresçam para ocupar todo o espaço */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o conteúdo e o ícone */
+            justify-content: space-between; /* Texto à esquerda e ícone à direita */
+            text-align: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 10px; /* Para suavizar as bordas dos Tabs */
+            background-color: #9F43BE; /* Cor de fundo violeta para os tabs */
+        }
+                /* Ajustes do ícone no tab */
+        /* Ícone no final do Tab */
+        .icon-wrapper {
+            margin-left: auto; /* Garante que o ícone vá para o fim do tab */
+        }
+
+        .tab2 i {
+            font-size: 18px;
+            color: #ffffff; /* Cor padrão do ícone */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        
+        .tab2:hover i {
+            color: #9669a5; /* Altera a cor no hover */ 
+            transform: scale(1.2); /* Amplia o ícone no hover */
+        }
+        /* 🔹 Ajustes para telas menores */
+    @media (max-width: 480px) {
+        .tabs-container2 {
+            flex-direction: column; /* Empilha os tabs */
+            align-items: center;
+        }
+    
+    .tab2 {
+        width: 90%; /* Ocupa quase toda a largura */
+        font-size: 14px; /* Reduz tamanho da fonte */
+        padding: 10px; /* Ajusta espaçamento */
+    }
+
+    .tab2 i {
+        font-size: 14px; /* Ícone menor */
+    }
+
+    .tab-content2 {
+        width: 95%; /* Ajusta para evitar estouro horizontal */
+    }
+}
+        .tab2:hover {
+            background-color: #9f43be7c; /* Cor mais escura ao passar o mouse */
+        }
+
+        /* Estilo para o conteúdo dos Tabs */ 
+        .tab-content2 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            background-color: #FFF;
+            display: none; /* Inicialmente escondido */
+            box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura */
+            width: 90%; /* Consistência com outras seções */
+            max-width: 800px; /* Limite máximo */
+            margin-left: auto; /* Centraliza horizontalmente */
+            margin-right: auto; /* Centraliza horizontalmente */
+            height: auto;
+        }
+
+        .tab-content2 p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Tab ativo */
+        .tab2.active {
+            background-color: #9f43be7c; /* Cor mais escura para indicar o ativo */
+            color: #FFFFFF; /* Mantém o texto em branco */
+            font-weight: bold; /* Destaca o texto */
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 100px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            margin-bottom: 20px;
+            margin-top: 50px;
+            padding: 0px;
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.8rem;
+            }
+
+            .secao2 p {
+                font-size: 1.5rem;
+            } 
+        }
+         /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #015A42; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            text-align: center;
+            font-size: 18px;
+            font-weight: normal;
+            padding: 50px;
+            box-sizing: border-box;
+            white-space: normal; /* Permite que o texto ocupe várias linhas */
+            word-wrap: break-word; /* Força quebra de palavras longas, se necessário */
+            overflow-wrap: break-word; /* Alternativa para forçar a quebra */
+        }
+
+        /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #015A42; /* Cor violeta */
+            font-size: 40px; /* Tamanho da seta */
+            cursor: pointer;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .arrow:hover {
+            color: #015a427e; /* Cor mais escura ao passar o mouse */
+        }
+
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #9F43BE; /* Fundo neutro */
+            border-top: 5px solid #600180;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #9F43BE; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #FFF;
+            margin-bottom: 15px;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 35px; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 1</h1>
+            <h2 class="subtitulo-professor">PROFª VALERIA SILVA ROSA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 4 | CONCORDÂNCIA VERBAL E CONCORDÂNCIA NOMINAL</h1>
+        </div>
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <!-- parágrafo com citação -->
+                <div class="quote-paragraph">
+                    <p><span class="text-right">“Feliz é aquele que transfere o que sabe e aprende o que ensina”.<br>
+                    (Cora Coralina foi uma poetisa e contista brasileira, 1889-1985.)</span></p>
+                </div>
+                <p>Olá estudante!</p>
+                <p>
+                    Nesta unidade, exploraremos dois mecanismos essenciais da Gramática Normativa: a Concordância
+                    Verbal e a Concordância Nominal. Esses conceitos, além de enriquecerem a construção de textos coesos
+                    e coerentes, têm um papel crucial no desenvolvimento pessoal e profissional, ampliando a capacidade de
+                    comunicação e expressão.
+                </p>
+                <p>
+                    Como destacam Nicola e Terra (2005), a concordância é um “mecanismo através do qual as palavras
+                    alteram suas terminações para se adequarem harmonicamente umas às outras na frase”. Ao compreender
+                    e aplicar esses princípios, você estará mais preparado para produzir textos claros, precisos e alinhados
+                    às normas cultas da língua.
+                </p>
+                <p>Bons estudos!</p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <!-- Título da seção -->
+        <h1>1. CONCORDÂNCIA VERBAL</h1>
+        
+        <!-- Parágrafos -->
+        <p>
+            Você sabe como funciona a concordância verbal? A via de regra geral, a concordância verbal estuda as
+            relações entre o verbo e o sujeito em número (singular ou plural) e pessoa (1ª, 2ª, 3ª).
+        </p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Figura 1.</span> Regra Geral</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737658725/Figura_1_k8t6ba.png"
+                alt="Descrição da imagem" class="imagem-quadrov">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: USF, 2024.</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadrov"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A imagem apresenta uma
+                    explicação sobre os acentos gráficos na língua portuguesa, com ilustrações e descrições para cada
+                    tipo de acento divididas e quatro quadros posicionados horizontalmente. Acento Circunflexo (ˆ): localizado
+                    na primeira
+                    coluna, “Ele indica a vogal
+                    tônica e, o, às vezes a. Timbre fechado.”. Til (~): localizado na segunda coluna, “Ele indica nasalização
+                    das vogais.”.
+                    Acento Agudo (´): localizado na
+                    terceira coluna, “Ele é sempre usado na vogal da sílaba tônica (saúde) ou átona (pé).”. Acento Grave (`):
+                    localizado na
+                    quarta coluna, “Ele é usado na
+                    fusão entre a preposição a com artigos e pronomes (crase): à, às, àquele etc.”. Os elementos visuais incluem
+                    um
+                    retângulo pontilhado central para
+                    destacar os símbolos dos acentos, com setas conectando cada símbolo às descrições detalhadas localizadas ao
+                    redor do
+                    quadro.</span></p>
+        </div>
+        <p>Para melhor compreender os mecanismos da <span class="text-red">concordância verbal</span> é muito importante que você saiba
+        reconhecer o(s) núcleo(s) do sujeito(s) de uma oração (substantivos, pronomes ou *palavras substantivadas).<br>
+        *Exemplos:</p>
+        <!-- Tópico 6 -->
+        <div class="topico-texto">
+            <ul>
+                <li><strong>▸ </strong>O <span class="text-red">olhar</span> de sua mãe era de reprovação. (Verbo)</li>
+                <li><strong>▸ </strong>O <span class="text-red">não</span> é uma palavra muito áspera. (Advérbio)</li>
+                <li><strong>▸ </strong>O <span class="text-red">azul</span> do mar é fantástico. (Adjetivo)</li>
+                <li><strong>▸ </strong>Eu não sei o <span class="text-red">porquê</span> de tanta tristeza. (Conjunção)</li>
+            </ul>
+        </div>
+        <p>Estudaremos, a seguir, os casos fundamentais da concordância verbal.</p>
+        <h1>1.1. SUJEITO COMPOSTO</h1>
+        <p>Geralmente, o verbo vai para o plural, porém algumas particularidades devem ser observadas. Quando o
+        sujeito estiver antes do verbo, o verbo irá para o plural. Por exemplo: “O amor e a paz triunfarão.”</p>
+        <p>Se o sujeito antes do verbo for formado por pessoas diferentes, o verbo pode ir para o plural ou concordar
+        com o termo mais próximo, como pode ser observado nos exemplos:</p>
+        <p><span class="fonte-menor">“Tu, ele e eu iremos ao teatro amanhã.”</span></p>
+        <p><span class="fonte-menor">“Tu e ele ireis ao teatro amanhã.”</span></p>
+        <p><span class="fonte-menor">“Eu e você somos irmãos de sangue”.</span></p>
+        <p><span class="fonte-menor">Em construções como: “Ainda reinavam (reinava) a confusão e a tristeza.” (Dinah S. de Queiroz), a escolha
+        pode variar dependendo do contexto ou da preferência estilística. Dependendo da linguagem falada e da
+        região, o “tu” é substituído por “você”, levando o verbo à 3ª pessoa.</span></p>
+        <p><span class="fonte-menor">Quando o sujeito estiver após o verbo, o verbo pode ir para o plural ou concordar com o termo mais
+        próximo: “Triunfarão o amor e a paz.”, “Triunfará o amor e a paz.”</span></p>
+        <p><span class="fonte-menor">Com sujeitos ligados pela conjunção “ou”, a concordância varia: (Veja a explicação a seguir navegando
+        pelas abas)</span></p>
+        <!-- Tabs -->
+        <div class="tabs-container2">
+            <div class="tab2" data-tab="tabb1">
+                EXCLUSÃO
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb2">
+                INCLUSÃO
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+            <div class="tab2" data-tab="tabb3">
+                RETIFICAÇÃO
+                <span class="icon-wrapper">
+                    <i class="fas fa-hand-pointer"></i>
+                </span>
+            </div>
+        </div>
+        <!-- Conteúdo dos Tabs -->
+        <div class="tab-content2" id="tabb1">
+            <p>
+                <strong>O verbo fica no singular</strong><br>
+                “Antonia ou Margarida
+                será homenageada nesse
+                verão.”
+            </p>
+        </div>
+        <div class="tab-content2" id="tabb2" style="display: none;">
+            <p>
+                <strong>O verbo vai para o plural</strong><br>
+                “A paciência ou a
+                humildade estarão
+                presentes no discurso de
+                Rafael.”
+            </p>
+        </div>
+        <div class="tab-content2" id="tabb3" style="display: none;">
+            <p>
+                O verbo concorda com
+                o termo mais próximo:
+                “O engenheiro ou os
+                engenheiros produzirão o
+                projeto.”
+            </p>
+        </div>
+        <p><span class="fonte-menor">Com a alternativa “nem...nem”, o verbo pode ir para o singular ou plural, ficando das seguintes maneiras:</span></p>
+        <p><span class="fonte-menor">“Nem a chuva, nem a enchente impediu o jogo.”</span></p>
+        <p><span class="fonte-menor">“Nem a chuva, nem a enchente impediram o jogo.”</span></p>
+        <br><br>
+        <p><span class="fonte-menor">Se o sujeito for formado por palavras sinônimas, o verbo pode ir para o singular ou concordar com o termo mais próximo como no exemplo:</span></p>
+        <p><span class="fonte-menor">“Fartura e abundância é próprio dos ricos.”</span></p>
+        <p><span class="fonte-menor">“Nem a chuva, nem a enchente impediu o jogo.”</span></p>
+        <br><br>
+        <p><span class="fonte-menor">Quando o sujeito é resumido por expressões como “tudo”, “nada”, “ninguém”, o verbo vai para o singular.
+        Veja o exemplo:</span></p>
+        <p><span class="fonte-menor">“O dinheiro, a fama, a popularidade, tudo acabou.”</span></p>
+        <br><br>
+        <p><span class="fonte-menor">Com sujeitos ligados por “como”, “assim como”, “bem como”, o verbo pode concordar no singular ou
+        plural. Observe:</span></p>
+        <p><span class="fonte-menor">“A vontade, assim como a inteligência, <strong>fazia</strong> dele o melhor aluno.”</span></p>
+        <p><span class="fonte-menor">“A vontade, assim como a inteligência, <strong>faziam</strong> dele o melhor aluno.”</span></p>
+        <br><br>
+        <p><span class="fonte-menor">Expressões como “não só...mas também” permitem o verbo tanto no singular quanto no plural:</p>
+        <p><span class="fonte-menor">“Tanto Júlia quanto Pedro <strong>viajou</strong> para Paris.”</span></p>
+        <p><span class="fonte-menor">“Tanto Júlia quanto Pedro <strong>viajaram</strong> para Paris.”</span></p>
+        <br><br>
+        <p><span class="fonte-menor">Com expressões como “a maioria de” ou “a maior parte de”, o verbo geralmente concorda no singular,
+        como no exemplo:</span></p>
+        <p><span class="fonte-menor">“A maioria dos jovens quer a reforma.”</span></p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Domine as nuances da concordância verbal com dicas objetivas e exemplos práticos
+                    assistindo ao vídeo a seguir.<br>
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>Língua Portuguesa - Concordância Verbal - AlfaCon</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/8Zm1x5WfJsQ?si=Fq1FGVevUScwNTI5"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>1.2. SUJEITO REPRESENTADO POR PRONOME INDEFINIDO</h1>
+        <p>Quando o sujeito é representado por um pronome indefinido, a concordância verbal segue regras
+        específicas, que podem ser observadas no slider a seguir.</p>
+        <div class="slider-container">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide()"></i>
+            <div class="slider">
+                <div class="slide">O pronome "quem" exige o verbo na 3ª pessoa do singular, mas também pode concordar com o sujeito da oração anterior,
+                dependendo do contexto.</br></br>
+                    <span class="fonte-menor">“Fui eu quem <strong>falou.</strong>” (forma mais usada)</span>
+                    <br>
+                    <span class="fonte-menor">“Fui eu quem <strong>falei.</strong>”</span>
+                </div>
+                <div class="slide">O pronome "qual" seguido por expressões como "de nós", "de vós" ou "de vocês" leva o verbo ao singular.
+                    </br></br>
+                    <span class="fonte-menor">"Qual de nós <strong>acertou</strong> a questão 4?"</span>
+                </div>
+                <div class="slide">Já o pronome "quais", nessas mesmas construções, leva o verbo ao plural.
+                    <br><br>
+                    <span class="fonte-menor">"Quais de nós <strong>acertamos (acertaram)</strong> a questão 4?"</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide()"></i>
+        </div>
+        <h1>1.3. OUTRAS REGRAS PARA SUJEITOS E CONCORDÂNCIAS VERBAL</h1>
+        <p>A concordância verbal apresenta nuances importantes dependendo da estrutura do sujeito e da frase.
+        Observe, a seguir, as principais regras e exemplos.</p>
+        <p>Sujeitos representados por expressões como “um dos que” ou “uma das que” permitem o verbo no singular
+        ou plural, dependendo do foco. <span class="fonte-menor">Observe o exemplo:</span></p>
+        <p><span class="fonte-menor">“Eu sou um dos que <strong>estuda à noite.»</strong></span></p>
+        <p><span class="fonte-menor">“Eu sou um dos que <strong>estudam à noite.»</strong></span></p>
+        <p>Quando o sujeito é precedido por expressões como «cerca de», «mais de» ou «menos de», o verbo
+        concorda com o substantivo que o acompanha. Como por exemplo:</p>
+        <p><span class="fonte-menor">“Cerca de um aluno <strong>foi</strong> reprovado.” ou</span></p>
+        <p><span class="fonte-menor">“Cerca de dez alunos <strong>foram</strong> reprovados.”</span></p>
+        <p>Substantivos coletivos levam o verbo para o singular, mas, se acompanhados por um nome no plural, o
+        verbo pode ficar no singular ou plural, da seguinte forma:</p>
+        <p><span class="fonte-menor">“A multidão <strong>aplaudiu</strong> o governador.”</span></p>
+        <p><span class="fonte-menor">“A multidão de operários <strong>aplaudiram</strong> o governador.”</span></p>
+        <p>Pronomes de tratamento sempre levam o verbo para a 3ª pessoa do singular, como a seguir:</p>
+        <p><span class="fonte-menor">“V.S.ª <strong>enobrece</strong> essa Editora com sua visita.”</span></p>
+        <p>Quando o sujeito é uma frase, o verbo vai para a 3ª pessoa do singular. Veja como fica nesse caso:</p>
+        <p><span class="fonte-menor">“ ‘Amar é viver’ será a frase de minha vida.”</span></p>
+        <p>Substantivos próprios seguem a concordância com o artigo. Precedidos de artigo no plural, o verbo vai ao
+        plural:</p>
+        <p><span class="fonte-menor"><strong>“Os</strong> Estados Unidos <strong>são</strong> uma nação muito desenvolvida”.</span></p>
+        <p>No artigo no plural, o verbo permanece no singular:</p>
+        <p><span class="fonte-menor">“Campinas é uma cidade muito populosa.”</span></p>
+        <p>Expressões como “um e outro” ou “nem um... nem outro” permitem o verbo no singular ou plural, dependendo
+        do contexto:</p>
+        <p><span class="fonte-menor">“Um e outro <strong>fala</strong> demais em sala de aula.”</span></p>
+        <p><span class="fonte-menor">“Um e outro <strong>falam</strong> demais em sala de aula.”</span></p>
+        <p>O verbo pode ficar no singular ou plural quando há as expressões “com” ou “junto com”. Confira o exemplo:</p>
+        <p><span class="fonte-menor">“O estudo, junto com a vontade, <strong>forma</strong> o bom aluno.”</span></p>
+        <p><span class="fonte-menor">“O estudo, junto com a vontade, <strong>formam</strong> o bom aluno.”</span></p><br>
+        <p><span class="fonte-menor">Essas regras destacam como a concordância verbal pode variar dependendo das expressões utilizadas
+        e do contexto em que estão inseridas, proporcionando flexibilidade e precisão na construção das frases.</span></p>
+
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>1.4. SUJEITO DOS VERBOS SER, FAZER E HAVER</h1>
+        <p>Vamos começar com o verbo ser, pois ele apresenta regras específicas de concordância, especialmente
+        devido à sua função de verbo de ligação. Ele concorda com o predicativo, o termo que atribui qualidade
+        ou estado ao sujeito. Quando o sujeito é representado por expressões como “tudo”, “nada”, “isto”, “aquilo”,
+        “todos”, ou por um substantivo no singular, o verbo concorda com o predicativo. Veja os exemplos:</p>
+        <p><span class="fonte-menor">“Tudo <strong>eram</strong> lembranças da Faculdade.”</span></p>
+        <p><span class="fonte-menor">“A vida <strong>são</strong> momentos de alegria.”</span></p>
+        <p><span class="fonte-menor">“A pátria não é ninguém: <strong>são</strong> todos.” (Rui Barbosa)</span></p>
+        <br>
+        <p><span class="fonte-menor">Usado impessoalmente (sem sujeito), o verbo concorda com o predicativo. Como por exemplo:</span></p>
+        <p><span class="fonte-menor"><strong>“Eram</strong> sete horas.”</span></p>
+        <p><span class="fonte-menor">“É uma hora.”</span></p>
+        <p><span class="fonte-menor"><strong>“São</strong> 20 de maio.”</span></p>
+        <br>
+        <p><span class="fonte-menor">Em locuções como “é muito”, “é pouco”, “é mais de”, “é menos de”, que indicam preço, porção, peso ou
+        quantidade, o verbo permanece no singular:</span></p>
+        <p><span class="fonte-menor">“Dois quilos é o suficiente.”</span></p>
+        <p><span class="fonte-menor">“Cem reais é muito para mim agora.”</span></p>
+        <p><span class="fonte-menor">“Quatro vezes é pouco.”</span></p>
+        <br>
+        <p><span class="fonte-menor">Com a construção do verbo ser + pronome pessoal + que, o verbo concorda com o pronome:</span></p>
+        <p><span class="fonte-menor"><strong>“Sou</strong> eu que produzo o caqui chocolate.”</span></p>
+        <p><span class="fonte-menor"><strong>“Seremos nós que produziremos o caqui chocolate.»</strong></span></p>
+        <br>
+        <p><span class="fonte-menor">Na construção do verbo ser + pronome pessoal + quem, o verbo concorda com o pronome ou fica na 3ª
+        pessoa do singular:</span></p>
+        <p><span class="fonte-menor">“<strong>Sou</strong> eu quem vendo carro de segunda mão.”</span></p>
+        <p><span class="fonte-menor">“É eu quem vende carro de segunda mão.” (pouco usado)</span></p>
+        <br>
+        <p><span class="fonte-menor">Em orações interrogativas iniciadas por pronomes como “quem”, “que”, “o que”, o verbo concorda com o
+        nome ou pronome que vem depois: “Quem <strong>eram</strong> os pais?”</span></p>
+        <p><span class="fonte-menor">Quando o sujeito é um substantivo seguido de pronome pessoal, o verbo concorda com o pronome: “Os
+        culpados <strong>somos nós.»</strong></span></p>
+        <p><span class="fonte-menor"><strong>Para indicar hora, data ou distância, o verbo concorda com o predicativo:</strong></span></p>
+        <p><span class="fonte-menor">“<strong>São</strong> três horas.”</span></p>
+        <p><span class="fonte-menor">“Hoje <strong>são</strong> 20 de dezembro.”</span></p>
+        <p><span class="fonte-menor">“Hoje <strong>é</strong> dia 20 de dezembro.”.</span></p>
+        <br>
+        <p><span class="fonte-menor">Na voz passiva, com o pronome apassivador “se”, o verbo concorda com o sujeito paciente (aparente
+        objeto direto):</span></p>
+        <p><span class="fonte-menor">“<strong>Vendem-se</strong> casas.”</span></p>
+        <p><span class="fonte-menor">“<strong>Precisa-se</strong> de operários.”</span></p>
+        <br>
+        <p><span class="fonte-menor">Ainda sobre sujeito dos verbos, confira as regras para os verbos fazer, haver e os verbos dar, soar e bater
+        navegando pelos botões abaixo:</span></p>
+        <!-- Outro grupo de Tabs -->
+        <div class="tabs-container2">
+            <div class="tab2" data-tab="tabx1">
+                Verbo Fazer 
+                <span class="icon-wrapper">
+                <i class="fas fa-hand-pointer"></i></span>
+            </div>
+            <div class="tab2" data-tab="tabx2">
+                Verbo Haver
+            <span class="icon-wrapper">
+                <i class="fas fa-hand-pointer"></i>
+            </span>
+            </div>
+            <div class="tab2" data-tab="tabx3">
+                Verbos Dar, Soar e Bater
+            <span class="icon-wrapper">
+                <i class="fas fa-hand-pointer"></i>
+            </span>
+            </div>
+        </div>
+        
+        <!-- Conteúdo do outro grupo de Tabs -->
+        <div class="tab-content2" id="tabx1" style="display: none;">
+            <p>O verbo fazer, quando
+            indica fenômenos
+            meteorológicos ou tempo
+            decorrido, é usado de
+            forma impessoal (sem
+            sujeito) e permanece
+            no singular: “Fez frio a
+            noite passada.”, “Faz dez
+            anos que ingressei como
+            professor na faculdade.”</p>
+        </div>
+        <div class="tab-content2" id="tabx2" style="display: none;">
+            <p>Quando o verbo haver tem
+            o sentido de existir, ele é
+            usado impessoalmente
+            (sem sujeito) e permanece
+            no singular: “Deveria
+            haver muitas razões
+            para tal atitude.”, “Há
+            muitas razões para tal
+            atitude.”, “Houve muitas
+            razões para tal atitude.”
+            (não houveram), “Haverá
+            muitas razões para tal
+            atitude.” (não haverão).</p>
+        </div>
+        <div class="tab-content2" id="tabx3" style="display: none;">
+            <p>Quando indicam hora(s),
+            esses verbos concordam
+            com o sujeito: “Deu uma
+            hora na torre da igreja.”,
+            “Soaram duas horas
+            naquele carrilhão.”</p>
+        </div>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Nesta aula dinâmica, o Prof. Noslen explica com clareza e bom humor como usar a
+                    concordância verbal corretamente. Você nunca mais terá dúvidas sobre o tema!<br>
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>Concordância Verbal - Aula 02 [Prof Noslen]</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/iZ7Ryffdoc0?si=C52-IiDe9gHzrewJ"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="secao2" class="secao2">
+        <h1>2. CONCORDÂNCIA NOMINAL</h1>
+        <p>Agora que você já entendeu como funciona a concordância verbal, vamos avançar nosso estudo para
+        aprendermos sobre concordância nominal. A concordância nominal analisa as relações entre um substantivo
+        e suas palavras determinantes, também chamadas de modificadores, que se ligam a ele para caracterizá
+        lo. Esses modificadores incluem artigos, pronomes, numerais e adjetivos, estabelecendo concordância
+        em gênero (masculino ou feminino) e número (singular ou plural).</p>
+        <!-- Quadro com borda violeta -->
+        <h2 class="titulo-quadrov"><span class="text-green">Figura 2.</span> Modificadores na Concordância Nominal</h2>
+        <div class="quadrov">
+            <!-- Imagem via link -->
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1737950927/esekyr8yximfrh7mqj4t.png"
+                alt="Descrição da imagem" class="imagem-quadrov">
+            <!-- Fonte da imagem -->
+            <p class="fonte-quadrov"><span class="fonte-menor"><strong>Fonte</strong>: Elaborado pela autora.</span></p>
+            <!-- Descrição da imagem -->
+            <p class="descricao-quadrov"><span class="fonte-menor"><strong>Descrição da imagem</strong>: A figura apresenta a análise gramatical da frase: “Os nossos dois lindos vasos de flores do jardim foram pintados.” São
+            utilizadas setas para conectar as palavras da frase às suas respectivas classificações, com diferentes cores para
+            exemplificação. “Os” (artigos)
+            destacado em verde. “nossos” (pronomes) destacado em azul claro. “dois” (numerais) destacado em laranja. “lindos”
+            (adjetivos) – destacado em roxo.
+            “vasos” (substantivos) – destacado em vermelho. Na parte inferior da figura ainda há as indicações: GÊNERO → masculino e
+            NÚMERO → plural.</span></p>
+        </div>
+        <p>Estudaremos, a seguir, os casos relevantes da concordância nominal.</p>
+        <h1>2.1. A CONCORDÂNCIA PODE VARIAR COM ADJETIVOS QUE SE REFEREM A VÁ
+        RIOS SUBSTANTIVOS</h1>
+        <p>Adjetivo caracterizando um único substantivo concorda com ele em gênero e número. Como? Veja os
+        exemplos a seguir:</p>
+        <p><span class="fonte-menor">“A linda modelo recebeu ótimas ofertas de emprego.”</span></p>
+        <p><span class="fonte-menor">“Belas flores foram compradas ontem.”</span></p><br>
+        <p>Adjetivo posicionado após dois ou mais substantivos, em geral, concorda com o substantivo mais próximo,
+        da seguinte maneira: <span class="fonte-menor">“O professor parabenizou o aluno e a aluna <strong>aplicada</strong>.” Ou concorda com todos os
+        substantivos no plural:</span></p>
+        <p><span class="fonte-menor">“Os livros, os cadernos e os lápis <strong>antigos</strong> foram doados para reciclagem.”</span></p>
+        <p><span class="fonte-menor">“José jogou fora as meias e as luvas <strong>rasgadas</strong>.”</span></p><br>
+        <p><span class="fonte-menor">Quando os substantivos são sinônimos, o adjetivo concorda com o mais próximo em gênero e número,
+        conforme os exemplos a seguir:</span></p>
+        <p><span class="fonte-menor">“A coragem e a braveza <strong>humana tudo conseguem.”.</strong></span></p>
+        <p><span class="fonte-menor">“A raiva e o ódio <strong>desmedido são prejudiciais.»</strong></span></p><br>
+        <p><span class="fonte-menor">Adjetivo posicionado antes de dois ou mais substantivos concorda com o substantivo mais próximo:</span></p>
+        <p><span class="fonte-menor"><strong>“Belas</strong> macieiras e abacateiros cresciam no pomar.”</span></p>
+        <p><span class="fonte-menor"><strong>“Ótimos</strong> professores e professoras trabalham nessa instituição.”</span></p><br>
+        <p><span class="fonte-menor">Adjetivo relacionado a nomes próprios ou graus de parentesco vai para o plural:</span></p>
+        <p><span class="fonte-menor">“Os <strong>talentosos</strong> Murilo e Luigi estudam em escolas diferentes.”</span></p>
+        <p><span class="fonte-menor">“Meus <strong>simpáticos</strong> tios e tias me deram um lindo presente de aniversário.”</span></p><br>
+        <p><span class="fonte-menor">Se os substantivos possuírem o mesmo gênero, o adjetivo fica no singular ou no plural. Veja os exemplos:</span></p>
+        <p><span class="fonte-menor">“O apartamento e o carro <strong>novo (novos).”</strong></span></p>
+        <p><span class="fonte-menor">“A beleza e a suavidade <strong>feminina (femininas).”</strong></span></p><br>
+        <p><span class="fonte-menor">Adjetivo concorda com os pronomes pessoais a que se refere:</span></p>
+        <p><span class="fonte-menor">“Carolina viu <strong>Renata e Fernanda</strong> ontem muito chateadas.”</span></p>
+        <p><span class="fonte-menor">“Carolina <strong>as</strong> viu ontem muito <strong>chateadas</strong>.”</span></p><br>
+        <p><span class="fonte-menor">
+            Adjetivos no singular caracterizando um único substantivo. Com artigo, o substantivo permanece no
+            singular: “Ricardo está aprendendo novos conteúdos com <strong>a professora inglesa e a italiana.”,</strong> e sem
+            artigo, o substantivo vai para o plural: “Ricardo está aprendendo novos conteúdos com <strong>professoras
+            inglesa e italiana.”.</strong>
+        </span></p>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>2.2. CONCORDÂNCIA DO VERBO SER</h1>
+        <p>O adjetivo concorda com o substantivo quando há presença de artigos ou outros determinantes, mas
+        permanece no masculino e no singular quando o substantivo se apresenta isolado, como mostram os
+        exemplos:</p>
+        <p><span class="fonte-menor">“A humildade é <strong>benéfica</strong> para todos!”</span></p><br>
+        <p><span class="fonte-menor">“Humildade é <strong>benéfico</strong> para todos!”</span></p><br>
+        <h1>2.3. CASOS ESPECIAIS</h1>
+        <p>Pronomes enfáticos (mesmo, próprio) concordam em gênero e número com a pessoa à qual se referem.
+        Confira os exemplos:</p>
+        <p><span class="fonte-menor">“Ele mesmo fez todo o trabalho de decoração.”</span></p>
+        <p><span class="fonte-menor">“Nós mesmas, disseram as meninas, iremos entrevistá-lo.”</span></p><br>
+        <p><span class="fonte-menor">Adjetivo “só” (sozinho) varia em gênero e número, como no exemplo “Eles estão <strong>sós</strong>”, mas como advérbio
+        (“apenas”) é invariável: “Eles <strong>só</strong> pediram água.”</span></p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="fonte-menor"><span class="topico-destaque"><strong>▸ “Quite”</strong> varia numericamente por ser um adjetivo que significa “livre”.</span></span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“Eu estou <strong>quite</strong>.”</span></p>
+        <p><span class="fonte-menor">“Nós estamos <strong>quites</strong>.”</span></p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="fonte-menor"><span class="topico-destaque"><strong>▸ “Anexo”</strong> é um adjetivo, portanto variável em gênero e número.</span></span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“O catálogo <strong>anexo</strong> apresenta novos modelos.”</span></p>
+        <p><span class="fonte-menor">“As faturas <strong>anexas</strong> são as que o senhor pediu.”</span></p>
+        <p><span class="fonte-menor">“Na redação <strong>anexa</strong> estão contidos os nomes dos implicados.”.</span></p><br>
+        <p>Já <strong>“em anexo”</strong> é uma locução adverbial. Quando “em anexo” aparecer no começo ou meio da oração,
+        haverá vírgula, mas não no fim.</p>
+        <p><span class="fonte-menor">“<strong>Em anexo</strong>, o arquivo com o convite de aniversário de Fernanda.”</span></p>
+        <p><span class="fonte-menor">“Segue, <strong>em anexo</strong>, o calendário de leitura litúrgica.”</span></p>
+        <p><span class="fonte-menor">“A carta do diretor seguiu <strong>em anexo</strong>.”</span></p><br>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ “Obrigado”</strong> deve concordar em gênero e número com o substantivo que caracteriza.</span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“Muito <strong>obrigada</strong> disse a professora ao receber o presente dos alunos.”</span></p>
+        <p><span class="fonte-menor">“Muito <strong>obrigado</strong> agradeceu o funcionário pela homenagem.”</span></p><br>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ “Meia”</strong> quando acompanha um substantivo é adjetivo e, portanto, varia em gênero e número. “Meio” ao modificar um adjetivo passa a ser advérbio, o que o torna invariável.</span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“João bebeu <strong>meio</strong> litro de água.”</span></p>
+        <p><span class="fonte-menor">“Joana chupou <strong>meia</strong> laranja.”</span></p>
+        <p><span class="fonte-menor">“Ela parece <strong>meio</strong> cansada.”</span></p><br>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ “Salvo” e “exceto”</strong> são formas invariáveis.</span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“Todos os alunos entregaram os trabalhos <strong>salvo</strong> dois.”</span></p>
+        <p><span class="fonte-menor">“Nenhuma rosa desfolhou <strong>exceto</strong> estas três.”</span></p><br>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ “Leso”</strong> concorda em gênero e número.</span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">”A todo instante cometem-se crimes de <strong>lesa</strong>-pátria.”</span></p>
+        <p><span class="fonte-menor">“Suas extravagâncias são um crime de <strong>leso</strong>-patrimônio.”</span></p><br>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ “Pseudo” e “alerta”</strong> são advérbios e, portanto, invariáveis.</span></li>
+            </ul>
+        </div>
+        <p><span class="fonte-menor">“Essas <strong>pseudo</strong>-reproduções não têm valor.”</span></p>
+        <p><span class="fonte-menor">“Os médicos devem ficar sempre <strong>alerta</strong>.”</span></p><br>
+        <p><span class="fonte-menor">Expressões como “é proibido”, “é necessário” seguem regras específicas:</span></p><br><br>
+        <div class="slider-container slider-container-2">
+            <i class="bx bx-chevron-left arrow left-arrow"></i>
+            <div class="slider">
+                <div class="slide">Se o substantivo vier sem artigo, o adjetivo permanece no masculino e no
+                singular, mantendo-se invariável.</br></br>
+                    “Entrada de pessoas estranhas é <strong>proibido.”</strong></div>
+                <div class="slide">Se o substantivo estiver acompanhado pelo artigo, o adjetivo concorda com ele em gênero e número.</br></br>
+                    "A caça à raposa é <strong>proibida</strong> neste país."</div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow"></i>
+        </div>
+        <br><br>
+        <p>Mesmo procedimento cabe com as expressões “é necessário”, “é bom”, “é preciso”, “é permitido”.</p>
+        <p><span class="fonte-menor">“<strong>É necessário</strong> respeito e tolerância para se viver em sociedade.”</span></p>
+        <p><span class="fonte-menor">“<strong>São necessários</strong> respeito e tolerância para se viver em sociedade.”</span></p><br>
+        <p>Adjetivos como “bastante”, “muito”, “pouco” variam apenas como adjetivos, não como advérbios.</p>
+        <p><span class="fonte-menor">“As crianças estavam bastante felizes.”</span></p>
+        <p><span class="fonte-menor">“Não há bastantes cadeiras nessa sala.”.</span></p><br>
+        <p>A palavra “bastante” enquanto adjetivo tem sido empregada erroneamente, pois sendo adjetivo deve
+        concordar em gênero e número com o substantivo. Se houver dúvidas, substitua-a pela palavra muito.
+        Como nos exemplos:</p>
+        <p><span class="fonte-menor">“Estou <strong>bastante (muito)</strong> feliz. (Correto)”</span></p>
+        <p><span class="fonte-menor">”Não há <strong>bastantes (muitas)</strong> cadeiras nessa sala de aula.”</p>
+        <p><span class="fonte-menor">“Você tem <strong>bastantes (muitos)</strong> livros com histórias de suspense.”</p>
+    </section>
+    <!-- Contêiner externo para definir a cor de fundo -->
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Revise e complemente seus conhecimentos a respeito de concordância nominal de
+                    forma detalhada e prática com este vídeo.<br>
+                </p>
+                <p class="learn-more-paragraph">
+                    <strong>Concordância Nominal - Língua Portuguesa - 11/25</strong>
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/YUI8XptNQRg?si=qT7g8zepIF7mJQvu"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>A Concordância Verbal e a Concordância Nominal são pilares fundamentais para a estruturação adequada
+                da língua portuguesa. Compreender os diferentes contextos e regras que envolvem esses mecanismos
+                é essencial para aprimorar a escrita, especialmente em situações formais e acadêmicas. Dominar esses
+                conceitos não apenas garante textos mais claros e precisos, mas também contribui para a credibilidade e
+                eficiência na comunicação.</p>
+                <p>Ao longo desta unidade, exploramos as particularidades da concordância, analisando exemplos e casos
+                que demonstram sua aplicabilidade prática. Assim, ao internalizar essas regras e incorporá-las ao seu
+                repertório linguístico, você estará mais bem preparado para enfrentar desafios que exijam uma comunicação
+                assertiva, seja no âmbito profissional ou pessoal. Lembre-se: a prática e a reflexão são fundamentais para
+                transformar o aprendizado em habilidade.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <!-- Conteúdo -->
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS BIBLIOGRÁFICAS</h1>
+                <p>ALMEIDA, Antonio Fernando de; ALMEIDA, Valéria Silva Rosa de. <strong>Português básico</strong>:
+                    gramática, redação,
+                    textos. 5. ed. São Paulo: Atlas, 2005.</p></br>
+                <p>BECHARA, Evanildo. <strong>Moderna gramática portuguesa.</strong> 21. ed. São Paulo: Nacional, 1976.</p>
+                </br>
+                <p>_______. <strong>A nova ortografia.</strong> Rio de Janeiro: Nova Fronteira, 2008.</p></br>
+                <p>CEGALLA, D. P. <strong>Novíssima gramática da língua portuguesa.</strong> 48.ed. revisada. São Paulo: Companhia
+                Editora Nacional, 2008.</p></br>
+                <p>NICOLA, José de; INFANTE, Ulisses. <strong>Gramática Contemporânea da língua portuguesa</strong>.7.ed.são Paulo:
+                Scipione, 1991.</p></br>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Script para funcionalidade dos Tabs da nova seção (tabs-container2)
+            document.querySelectorAll('.tab2').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.getAttribute('data-tab');
+
+                    // Remove o conteúdo visível de todos os Tabs dentro da nova seção
+                    document.querySelectorAll('.tab-content2').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Mostra o conteúdo do Tab clicado
+                    document.getElementById(targetId).style.display = 'block';
+
+                    // Remove a classe 'active' de todos os Tabs dentro da nova seção
+                    document.querySelectorAll('.tab2').forEach(t => {
+                        t.classList.remove('active');
+                    });
+
+                    // Adiciona a classe 'active' ao Tab clicado
+                    tab.classList.add('active');
+                });
+            });
+            // Função para abrir o modal com o vídeo
+                function openVideoModal(element) {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+                    var videoLink = element.getAttribute("data-video");
+
+                    // Define o src do iframe com o link do vídeo
+                    iframe.src = videoLink;
+
+                    // Exibe o modal
+                    videoModal.style.display = "flex";
+                }
+
+                // Função para fechar o modal
+                function closeVideoModal() {
+                    var videoModal = document.getElementById('videoModal');
+                    var iframe = document.getElementById('videoIframe');
+
+                    // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+                    iframe.src = "";
+                    videoModal.style.display = "none";  // Fecha o modal
+                }
+
+                // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+                document.getElementById('videoModal').addEventListener('click', function (event) {
+                    // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+                    if (event.target === this) {
+                        closeVideoModal();
+                    }
+                });
+                function initializeSlider(sliderSelector) {
+                        const sliderContainer = document.querySelector(sliderSelector);
+                        const slider = sliderContainer.querySelector('.slider');
+                        const slides = sliderContainer.querySelectorAll('.slide');
+                        const leftArrow = sliderContainer.querySelector('.left-arrow');
+                        const rightArrow = sliderContainer.querySelector('.right-arrow');
+                        let currentIndex = 0;
+
+                        function showSlide(index) {
+                            const totalSlides = slides.length;
+
+                            if (index < 0) {
+                                currentIndex = totalSlides - 1;
+                            } else if (index >= totalSlides) {
+                                currentIndex = 0;
+                            } else {
+                                currentIndex = index;
+                            }
+
+                            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        }
+
+                        leftArrow.addEventListener('click', () => showSlide(currentIndex - 1));
+                        rightArrow.addEventListener('click', () => showSlide(currentIndex + 1));
+
+                        // Inicializa o slider
+                        showSlide(currentIndex);
+                    }
+
+                    // Exemplo de inicialização de sliders
+                    initializeSlider('.slider-container'); // Slider 1
+                    initializeSlider('.slider-container-2'); // Slider 2   
+                    // Navbar
+                        document.querySelector('.menu-toggle').addEventListener('click', () => {
+                            const menu = document.querySelector('.navbar ul');
+                            const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                            menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                            // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                            icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                            icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+                        });
+                        // Fechar o menu ao clicar em um link
+                        const links = document.querySelectorAll('.navbar ul li a');
+                        links.forEach(link => {
+                            link.addEventListener('click', () => {
+                                const menu = document.querySelector('.navbar ul');
+                                const icons = document.querySelectorAll('.menu-toggle i');
+
+                                // Fecha o menu ao clicar no link
+                                menu.classList.remove('show');
+                                icons[0].style.display = 'block'; // Exibe o ícone de menu
+                                icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                            });
+                        });
+                        // Captura o elemento navbar
+                        const navbar = document.querySelector('.navbar');
+
+                        // Função que altera a opacidade da navbar
+                        window.addEventListener('scroll', () => {
+                            if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                                navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                            } else {
+                                navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                            }
+                        });
+    </script>
+</body>
+</html>
