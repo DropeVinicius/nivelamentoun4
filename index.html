@@ -991,6 +991,36 @@
         .right-arrow {
             right: 10px;
         }
+        .download-section {
+                background-color: #9f43be11; /* Fundo violeta suave */
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
         /* Conteúdo da Conclusão */
         .conclusao {
             display: flex;
@@ -1174,7 +1204,7 @@
             <li><a href="#introducao">Introdução</a></li>
             <li><a href="#secao1">Tópico 1</a></li>
             <li><a href="#secao2">Tópico 2</a></li>
-            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#download">Download</a></li>
             <li><a href="#conclusao">Conclusão</a></li>
             <li><a href="#referencias">Refs Bibliográficas</a></li>
         </ul>
@@ -1400,7 +1430,7 @@
             </div>
         </section>
     </section>
-    <section id="secao2" class="secao2">
+    <section class="secao2">
         <h1>1.2. SUJEITO REPRESENTADO POR PRONOME INDEFINIDO</h1>
         <p>Quando o sujeito é representado por um pronome indefinido, a concordância verbal segue regras
         específicas, que podem ser observadas no slider a seguir.</p>
@@ -1794,6 +1824,11 @@
             </div>
         </section>
     </section>
+    <div id="download" class="download-section">
+        <a href="https://drive.google.com/uc?export=download&id=1fqLq1drWdMnfjGgyV2ZenHje_P2WT9Mt" class="download-btn">
+            Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+        </a>
+    </div>
     <!-- Seção Conclusão -->
     <section id="conclusao" class="conclusao">
         <!-- Conteúdo -->
