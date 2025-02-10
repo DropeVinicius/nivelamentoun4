@@ -402,7 +402,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -411,22 +411,22 @@
         @media (max-width: 768px) {
             .secao1 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao1 p {
-                font-size: 0.6rem;
+                font-size: 0.9rem;
                 line-height: 1.4;
             }
 
         }
         @media (max-width: 480px) {
             .secao1 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao1 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
         /* Quadro com borda violeta */
@@ -446,7 +446,7 @@
             font-size: 18px;
             font-family: 'Roboto', sans-serif;
             color: #333; /* Verde */
-            margin-bottom: 20px;
+            margin: 20px 20px;
         }
 
         /* Imagem dentro do quadro */
@@ -546,6 +546,7 @@
             display: flex;
             align-items: flex-start; /* Alinha o texto com o ícone */
             white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+            flex-wrap: wrap;
         }
                 .topico-destaque {
             font-size: 18px; /* Aumente o tamanho conforme a necessidade */
@@ -903,7 +904,6 @@
             width: 90%;
             max-width: 800px;
             text-align: left;
-            
         }
 
         .secao2 p {
@@ -911,7 +911,7 @@
             text-align: justify;
             line-height: 1.6;
             color: #333;
-            margin-bottom: 10px;
+            margin: 20px auto;
             width: 90%; /* Ajuste de largura */
             max-width: 800px; /* Limite máximo */
         }
@@ -920,7 +920,7 @@
         @media (max-width: 768px) {
             .secao2 h1 {
                 font-size: 1.5rem;
-                text-align: center;
+                text-align: left;
             }
 
             .secao2 p {
@@ -931,11 +931,11 @@
         }
         @media (max-width: 480px) {
             .secao2 h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .secao2 p {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             } 
         }
          /* Container do slider */
@@ -961,13 +961,65 @@
             text-align: center;
             font-size: 18px;
             font-weight: normal;
-            padding: 50px;
+            padding: 40px 20px; /* Ajuste para telas menores */
             box-sizing: border-box;
-            white-space: normal; /* Permite que o texto ocupe várias linhas */
-            word-wrap: break-word; /* Força quebra de palavras longas, se necessário */
-            overflow-wrap: break-word; /* Alternativa para forçar a quebra */
+            white-space: normal; /* Permite quebra de linha */
+            word-wrap: break-word; /* Quebra palavras longas */
+            overflow-wrap: break-word; /* Alternativa */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
         }
 
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
         /* Setas */
         .arrow {
             position: absolute;
@@ -1458,8 +1510,8 @@
         Observe, a seguir, as principais regras e exemplos.</p>
         <p>Sujeitos representados por expressões como “um dos que” ou “uma das que” permitem o verbo no singular
         ou plural, dependendo do foco. <span class="fonte-menor">Observe o exemplo:</span></p>
-        <p><span class="fonte-menor">“Eu sou um dos que <strong>estuda à noite.»</strong></span></p>
-        <p><span class="fonte-menor">“Eu sou um dos que <strong>estudam à noite.»</strong></span></p>
+        <p><span class="fonte-menor">“Eu sou um dos que <strong>estuda à noite.”</strong></span></p>
+        <p><span class="fonte-menor">“Eu sou um dos que <strong>estudam à noite.”</strong></span></p>
         <p>Quando o sujeito é precedido por expressões como «cerca de», «mais de» ou «menos de», o verbo
         concorda com o substantivo que o acompanha. Como por exemplo:</p>
         <p><span class="fonte-menor">“Cerca de um aluno <strong>foi</strong> reprovado.” ou</span></p>
@@ -1511,7 +1563,7 @@
         <br>
         <p><span class="fonte-menor">Com a construção do verbo ser + pronome pessoal + que, o verbo concorda com o pronome:</span></p>
         <p><span class="fonte-menor"><strong>“Sou</strong> eu que produzo o caqui chocolate.”</span></p>
-        <p><span class="fonte-menor"><strong>“Seremos nós que produziremos o caqui chocolate.»</strong></span></p>
+        <p><span class="fonte-menor"><strong>“Seremos nós que produziremos o caqui chocolate.”</strong></span></p>
         <br>
         <p><span class="fonte-menor">Na construção do verbo ser + pronome pessoal + quem, o verbo concorda com o pronome ou fica na 3ª
         pessoa do singular:</span></p>
@@ -1669,7 +1721,7 @@
         <p><span class="fonte-menor">Quando os substantivos são sinônimos, o adjetivo concorda com o mais próximo em gênero e número,
         conforme os exemplos a seguir:</span></p>
         <p><span class="fonte-menor">“A coragem e a braveza <strong>humana tudo conseguem.”.</strong></span></p>
-        <p><span class="fonte-menor">“A raiva e o ódio <strong>desmedido são prejudiciais.»</strong></span></p><br>
+        <p><span class="fonte-menor">“A raiva e o ódio <strong>desmedido são prejudiciais.”</strong></span></p><br>
         <p><span class="fonte-menor">Adjetivo posicionado antes de dois ou mais substantivos concorda com o substantivo mais próximo:</span></p>
         <p><span class="fonte-menor"><strong>“Belas</strong> macieiras e abacateiros cresciam no pomar.”</span></p>
         <p><span class="fonte-menor"><strong>“Ótimos</strong> professores e professoras trabalham nessa instituição.”</span></p><br>
